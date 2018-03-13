@@ -42,9 +42,9 @@ namespace GeneratePasswords
 
                 // Список для паролей
                 ListPasswords list = new ListPasswords();
-                // строка для пароля
+                // Строка для пароля
                 string part = "abcdefghijklmnopqrstuvwxyz0123456789";
-                // 
+                // Генератор случайных чисел
                 Random rnd = new Random();
 
                 for (int i = 0; i < count; i++)
@@ -68,7 +68,11 @@ namespace GeneratePasswords
 						}
 					}
 
+                    // Заполнение списка
                     list.Add(new Passwords(tmpStr.ToString()));
+
+                    // Привязка данных
+                    gridPasswords.ItemsSource = list;
                 }
             }
             catch (FormatException)
