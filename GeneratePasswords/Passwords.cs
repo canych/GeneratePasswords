@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GeneratePasswords
 {
+    /// <summary>
+    /// Модель данных
+    /// </summary>
     class Passwords
     {
         // Пароль
@@ -13,6 +16,9 @@ namespace GeneratePasswords
         public string Pass { get => _pass; set => _pass = value; }
     }
 
+    /// <summary>
+    /// Класс-обертка
+    /// </summary>
     class ListPasswords: List<Passwords>
     {
 
