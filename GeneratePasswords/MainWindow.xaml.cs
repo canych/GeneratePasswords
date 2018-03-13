@@ -1,17 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GeneratePasswords
 {
@@ -41,7 +31,7 @@ namespace GeneratePasswords
                 }
 
                 // Список для паролей
-                ListPasswords list = new ListPasswords();
+                List<Passwords> list = new List<Passwords>();
                 // Строка для пароля
                 string part = "abcdefghijklmnopqrstuvwxyz0123456789";
                 // Генератор случайных чисел
@@ -70,10 +60,12 @@ namespace GeneratePasswords
 
                     // Заполнение списка
                     list.Add(new Passwords(tmpStr.ToString()));
-
-                    // Привязка данных
-                    gridPasswords.ItemsSource = list;
                 }
+
+                // Привязка данных
+                gridPasswords.ItemsSource = list;
+                // Отображение паролей
+                gridPasswords.Visibility = Visibility.Visible;
             }
             catch (FormatException)
             {
