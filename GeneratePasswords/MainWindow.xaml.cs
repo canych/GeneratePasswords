@@ -41,7 +41,7 @@ namespace GeneratePasswords
                 }
 
                 // Список для паролей
-                List<String> passwordList = new List<string>();
+                ListPasswords list = new ListPasswords();
                 // строка для пароля
                 string part = "abcdefghijklmnopqrstuvwxyz0123456789";
                 // 
@@ -58,18 +58,18 @@ namespace GeneratePasswords
 						{
 							tmpStr.Append(part[rnd.Next(26, 36)]);
 						}
+                        else if (j == 0 || j == 1)
+                        {
+                            tmpStr.Append(part[rnd.Next(0, 26)]);
+                        }
 						else
 						{
 							tmpStr.Append(part[rnd.Next(0, 36)]);
 						}
 					}
-					
-					passwordList.Add(tmpStr.ToString());
-					
-                }
 
-                int b = 6;
-				
+                    list.Add(new Passwords(tmpStr.ToString()));
+                }
             }
             catch (FormatException)
             {
