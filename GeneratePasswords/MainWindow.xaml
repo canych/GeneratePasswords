@@ -1,0 +1,27 @@
+﻿<Window x:Class="GeneratePasswords.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="392*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnCreate"
+                Content="Создать"
+                HorizontalAlignment="Left"
+                Margin="10,0,0,10"
+                VerticalAlignment="Bottom"
+                Width="105"
+                Grid.Column="0" Click="btnCreate_Click"/>
+        <DataGrid x:Name="gridPasswords"
+                  Grid.Column="1"
+                  Margin="10,10,10,10"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Visibility="Hidden"/>
+    </Grid>
+</Window>
