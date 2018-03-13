@@ -24,12 +24,4 @@ namespace GeneratePasswords
             _pass = pass;
         }
     }
-
-    /// <summary>
-    /// Класс-обертка
-    /// </summary>
-    class ListPasswords: List<Passwords>
-    {
-
-    }
 }

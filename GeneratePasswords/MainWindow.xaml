@@ -23,8 +23,11 @@
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
                   Visibility="Hidden">
-            <DataGridTextColumn Header="Пароль"
-                                Binding="{Binding Pass}"/>
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="col"
+                                    Header="Пароль"
+                                    Binding="{Binding Pass}"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Window>
