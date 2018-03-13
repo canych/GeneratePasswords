@@ -22,6 +22,9 @@
                   Margin="10,10,10,10"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
-                  Visibility="Hidden"/>
+                  Visibility="Hidden">
+            <DataGridTextColumn Header="Пароль"
+                                Binding="{Binding Pass}"/>
+        </DataGrid>
     </Grid>
 </Window>
